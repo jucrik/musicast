@@ -1,5 +1,5 @@
 Versiones:<br>
-[![Radio](https://img.shields.io/badge/Documentación-v0.18.5-orange)](https://jucrik.com/streaming-de-audio)
+[![Radio](https://img.shields.io/badge/Versión-v0.18.5-orange)](https://jucrik.com/streaming-de-audio)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.04.4-orange)]()
 [![Web](https://img.shields.io/badge/Sitio_Web-jucrik.com-blue)](https://jucrik.com/)
 
