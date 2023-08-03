@@ -11,11 +11,11 @@ get_urls() {
   get_folder_azuracast
 }
 
-#get_urls_radio() {
-#  get_
-#}
+get_update_radio() {
+  get_folder_azuracast
+}
 
-#get_urls_azuracast() {
+#get_update_azuracast() {
 #  get_
 #}
 
@@ -25,7 +25,7 @@ inquiry_options() {
   printf "${YELLOW} 🚀 ¡Bienvenido al instalador de Radio de Jucrik.com! Selecciona la siguiente acción para continuar:${GRAY_LIGHT}"
   printf "\n\n"
   printf "   [1] Instalar Radio de Jucrik.com\n"
-#  printf "   [2] Actualizar Radio\n"
+  printf "   [2] Radio ya está instalado en mi sistema, solo quiero actualizarlo\n"
 #  printf "   [3] Actualizar Azuracast\n"
   printf "   [4] Mejor en otra ocasión\n"
   printf "\n"
@@ -37,11 +37,11 @@ inquiry_options() {
       ;;
 
     2)
-      get_urls_radio
+      get_update_radio
       ;;
 
     3)
-      get_urls_azuracast
+      get_update_azuracast
       ;;
 
     4)
