@@ -5,9 +5,8 @@
 folder_search() {
   print_banner
   printf "${YELLOW} 🔎 Buscando la carpeta codificada donde se instaló AzuraCast...${GRAY_LIGHT}"
-  import msvcrt
-  print("Cuando hayas copiado el nombre de la carpeta codificada, presione una tecla para continuar...")
-  msvcrt.getch()
+  print "Cuando hayas copiado el nombre de la carpeta codificada, presione una tecla para continuar..."
+  read -p "> "
 }
 
 get_folder_azuracast() {
