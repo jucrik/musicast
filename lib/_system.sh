@@ -11,6 +11,7 @@ system_git_clone() {
   sleep 2
 
   sudo su - root <<EOF
+  cd ~
   git clone https://github.com/jucrik/radio.git /var/azuracast/radio-jucrik
 EOF
 
