@@ -121,6 +121,6 @@ Si tiene un certificado SSL personalizado en su host, debe crear el archivo <cod
 
 services:<br>
 &nbsp;&nbsp;web:<br>
-&nbsp;&nbsp;&nbsp;volumes:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro<br>
-&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
+&nbsp;&nbsp;&nbsp;&nbsp;volumes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
