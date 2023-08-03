@@ -39,6 +39,7 @@ inquiry_options
 # installation order
 # system
 system_copy_files
+system_end_installation
 
 # backend
 
