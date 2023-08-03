@@ -119,8 +119,8 @@ Una vez que esta configuración esté habilitada, no solo todos los usuarios ser
 # Uso de un certificado personalizado
 Si tiene un certificado SSL personalizado en su host, debe crear el archivo <code>docker-compose.override.yml</code> en su directorio <code>/var/azuracast</code> con el contenido a continuación, modificado para reflejar su nombre de dominio y la ruta a su certificado y clave SSL:
 
-services:
-  web:
-    volumes:
-      - /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro
-      - /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
+services:<br>
+&nbsp;&nbsp;web:<br>
+&nbsp;&nbsp;&nbsp;volumes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro<br>
+&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
