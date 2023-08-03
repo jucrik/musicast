@@ -5,8 +5,9 @@
 folder_search() {
   print_banner
   printf "${YELLOW} 🔎 Buscando la carpeta codificada donde se instaló AzuraCast...${GRAY_LIGHT}"
+  find /var/lib/docker/overlay2/ -name main.phtml
   print "Cuando hayas copiado el nombre de la carpeta codificada, presione una tecla para continuar..."
-  read -p "> "
+  read -p
 }
 
 get_folder_azuracast() {
