@@ -24,12 +24,12 @@ folder_azuracast=${folder_azuracast}
 EOF
 fi
 
-# this file has passwords
-#sudo su - root <<EOF
-#chown root:root "${PROJECT_ROOT}"/config
-#chmod 700 "${PROJECT_ROOT}"/config
-#EOF
-#source "${PROJECT_ROOT}"/config
+ this file has passwords
+sudo su - root <<EOF
+chown root:root "${PROJECT_ROOT}"/config
+chmod 700 "${PROJECT_ROOT}"/config
+EOF
+source "${PROJECT_ROOT}"/config
 
 # interactive CLI
 inquiry_options
