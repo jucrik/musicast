@@ -14,7 +14,7 @@ system_copy_files() {
   cd ~
   cp -r /var/azuracast/radio-jucrik/img/login/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/web/static/img
   sleep 2
-  rm -r /var/azuracast/radio-jucrik
+  cd ~ && rm -r /var/azuracast/radio-jucrik
 EOF
 
   sleep 2
@@ -23,6 +23,6 @@ EOF
 # Instalación finalizada.
 system_end_installation() {
   print_banner
-  printf "${YELLOW} ✅ Instalación finalizada...${GRAY_LIGHT}"
+  printf "${YELLOW} ✅ Instalación finalizada con éxito.${GRAY_LIGHT}"
   printf "\n\n"
 }

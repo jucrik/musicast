@@ -1,5 +1,24 @@
 #!/bin/bash
 
+
+# Instalar Radio de Jucrik.
+folder_search() {
+  print_banner
+  printf "${YELLOW} 🔎 Buscando la carpeta codificada donde se instaló AzuraCast...${GRAY_LIGHT}"
+  wait_for("Presione Enter cuando haya copiado la carpeta para continuar", '\n')
+
+  sleep 2
+
+  sudo su - root <<EOF
+  cd ~
+  cp -r /var/azuracast/radio-jucrik/img/login/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/web/static/img
+  sleep 2
+  cd ~ && rm -r /var/azuracast/radio-jucrik
+EOF
+
+  sleep 2
+}
+
 get_folder_azuracast() {
   print_banner
   printf "${YELLOW} 📂 Escriba el nombre de la carpeta codificada donde se instaló azuracast:${GRAY_LIGHT}"
@@ -8,6 +27,7 @@ get_folder_azuracast() {
 }
 
 get_urls() {
+  folder_search
   get_folder_azuracast
 }
 
