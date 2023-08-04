@@ -51,7 +51,6 @@ Conéctese al servidor o computadora en la que desea instalar AzuraCast a travé
 
 1. Elija un directorio base en su computadora host que AzuraCast pueda usar. Si está en Linux, puede seguir los pasos a continuación para usar el directorio recomendado:
 ```bash
-apt install pv
 mkdir -p /var/azuracast
 cd /var/azuracast
 ```

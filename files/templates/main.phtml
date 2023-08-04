@@ -192,10 +192,10 @@ endif; ?> role="contentinfo" aria-label="<?= __('Footer') ?>">
         __('Desarrollado por Jucrik.com'),
         '<a href="https://jucrik.com/" target="_blank">' . $environment->getAppName(
             ) . '</a> &bull; ' . $version->getVersionText() . ' &bull; ' . ($environment->isDocker(
-        ) ? 'Docker' : 'Ansible') . ' &bull; PHP ' . \PHP_MAJOR_VERSION . '.' . \PHP_MINOR_VERSION
+            ) ? 'Docker' : 'Ansible') . ' &bull; PHP ' . \PHP_MAJOR_VERSION . '.' . \PHP_MINOR_VERSION
     ) ?>
     <br>
-    <?= __('¿Te gusta este software?') ?> <a href="https://paypal.me/jucrik"><?= __(
+    <?= __('¿Te gusta este software?') ?> <a href="https://paypal.me/jucrik" target="_blank"><?= __(
             '¡Dona para apoyar este proyecto!'
         ) ?></a>
 </footer>

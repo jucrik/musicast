@@ -12,9 +12,7 @@ system_copy_files() {
 
   sudo su - root <<EOF
   cd ~
-  cp -r /var/azuracast/radio-jucrik/files/frontend/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/frontend/scss
-  cp -r /var/azuracast/radio-jucrik/files/templates/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/templates
-  cp -r /var/azuracast/radio-jucrik/img/login/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/web/static/img
+  cp -r /var/azuracast/radio-jucrik/files/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www
   sleep 2
   cd ~ && rm -r /var/azuracast/radio-jucrik
 EOF
