@@ -58,8 +58,8 @@ endif; ?>">
     <?php
     endif; ?>
 
-    <a class="navbar-brand ms-0 me-auto" href="<?= $router->named('dashboard') ?>">
-        azura<strong>cast</strong> <?php
+    <?php/*<a class="navbar-brand ms-0 me-auto" href="<?= $router->named('dashboard') ?>">
+        azura<strong>cast</strong>*/?> <?php
         ?><img src="https://jucrik.com/files/logos/products/radio.png"><?php
         if (!empty($customization->getInstanceName())): ?>
             <small><?= $this->e($customization->getInstanceName()) ?></small><?php
