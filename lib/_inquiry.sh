@@ -21,6 +21,13 @@ get_urls() {
   get_folder_azuracast
 }
 
+# Actualizar AzuraCast.
+get_update_azuracast() {
+  print_banner
+  printf "${YELLOW} Hola.${GRAY_LIGHT}"
+  printf "\n\n"
+}
+
 inquiry_options() {
   
   print_banner

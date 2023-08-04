@@ -26,10 +26,3 @@ system_end_installation() {
   printf "${YELLOW} ✅ Instalación finalizada con éxito.${GRAY_LIGHT}"
   printf "\n\n"
 }
-
-# Actualizar AzuraCast.
-get_update_azuracast() {
-  print_banner
-  printf "${YELLOW} Hola.${GRAY_LIGHT}"
-  printf "\n\n"
-}
