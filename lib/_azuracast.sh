@@ -10,6 +10,7 @@ get_update_azuracast() {
   sleep 2
 
   sudo su - root <<EOF
+  cd ~
   cd /var/azuracast
   ./docker.sh update-self
   yes "" | ./docker.sh update
@@ -34,7 +35,7 @@ system_end_update() {
       ;;
 
     2)
-      rm -r /var/azuracast/radio-jucrik && exit
+      cd ~ && rm -r /var/azuracast/radio-jucrik && exit
       ;;
 
     *) exit ;;
