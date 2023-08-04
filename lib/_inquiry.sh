@@ -22,7 +22,7 @@ get_urls() {
 }
 
 get_update_azuracast() {
-  bash /lib/azuracast.sh && exit
+  bash azuracast.sh && exit
 }
 
 inquiry_options() {
