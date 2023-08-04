@@ -38,20 +38,9 @@ $header ??= null;
 if ($sections->has('sidebar')): ?>has-sidebar<?php
 endif; ?>">
 
-<?= $this->fetch('partials/bodyjs') ?>
-
-<script>
-    <?php
-    $csrfJson = 'null';
-    $csrf = $request->getAttribute(App\Http\ServerRequest::ATTR_SESSION_CSRF);
-    if ($csrf instanceof App\Session\Csrf) {
-        $csrfToken = $csrf->generate(App\Middleware\Auth\ApiAuth::API_CSRF_NAMESPACE);
-        $csrfJson = json_encode($csrfToken, JSON_THROW_ON_ERROR);
-    }
-    ?>
-
-    App.api_csrf = <?=$csrfJson ?>;
-</script>
+<?= $this->fetch('partials/bodyjs', [
+    'include_csrf' => true,
+]) ?>
 
 <?= $sections->get('bodyjs') ?>
 
@@ -70,7 +59,8 @@ endif; ?>">
     endif; ?>
 
     <a class="navbar-brand ms-0 me-auto" href="<?= $router->named('dashboard') ?>">
-        <!--img src="https://jucrik.com/wp-content/uploads/logo-com-white.png"--> <?php
+        azura<strong>cast</strong> <?php
+        ?><!--img src="https://jucrik.com/wp-content/uploads/logo-com-white.png"--><?php
         if (!empty($customization->getInstanceName())): ?>
             <small><?= $this->e($customization->getInstanceName()) ?></small><?php
         endif; ?>
@@ -119,7 +109,7 @@ endif; ?>">
                 </a>
             </li>
             <li>
-                <a class="dropdown-item" href="https://jucrik.com/docs"
+                <a class="dropdown-item" href="https://docs.azuracast.com/en/user-guide/troubleshooting"
                    target="_blank">
                     <i class="material-icons" aria-hidden="true">help</i>
                     <?= __('Help') ?>
