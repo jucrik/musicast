@@ -38,7 +38,7 @@ inquiry_options() {
       ;;
 
     2)
-      bash update_azuracast.sh
+      sh update_azuracast.sh
       ;;
 
     3)
