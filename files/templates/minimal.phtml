@@ -53,7 +53,7 @@ $hide_footer ??= false;
 </main>
 
 <?php
-$hide_footer ??= true;
+/*$hide_footer ??= false;
 if (!$customization->hideProductName() && !$hide_footer): ?>
     <footer id="footer" class="footer-alt" role="contentinfo" aria-label="<?= __('Footer') ?>">
         <?= sprintf(
@@ -61,7 +61,7 @@ if (!$customization->hideProductName() && !$hide_footer): ?>
             '<a href="https://azuracast.com/" target="_blank">' . $environment->getAppName() . '</a>' . ' '
         ) ?>
     </footer>
-<?php
+<?php*/
 endif; ?>
 
 <?= $this->fetch('partials/toasts') ?>
