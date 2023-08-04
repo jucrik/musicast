@@ -8,3 +8,4 @@ get_update_azuracast() {
   printf "\n\n"
   read -p "> " update_azuracast
   exit
+}
