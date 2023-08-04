@@ -21,10 +21,6 @@ get_urls() {
   get_folder_azuracast
 }
 
-get_update_azuracast() {
-  bash azuracast.sh && exit
-}
-
 inquiry_options() {
   
   print_banner
@@ -42,7 +38,7 @@ inquiry_options() {
       ;;
 
     2)
-      get_update_azuracast
+      bash /lib/azuracast.sh
       ;;
 
     3)
