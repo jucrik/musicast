@@ -2,10 +2,8 @@
 # 
 # update AzuraCast
 
-update_azuracast() {
-  print_banner
-  printf "${YELLOW} Hola.${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " update_azuracast
-  exit
-}
+print_banner
+printf "${YELLOW} Hola.${GRAY_LIGHT}"
+printf "\n\n"
+read -p "> " update_azuracast
+exit

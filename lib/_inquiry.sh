@@ -38,7 +38,7 @@ inquiry_options() {
       ;;
 
     2)
-      bash /lib/azuracast.sh
+      bash azuracast.sh
       ;;
 
     3)
