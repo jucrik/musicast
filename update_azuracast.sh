@@ -35,4 +35,4 @@ source "${PROJECT_ROOT}"/config
 get_update_azuracast
 
 # installation order
-system_end_installation
+system_end_update

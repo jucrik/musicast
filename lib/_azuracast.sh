@@ -22,8 +22,15 @@ EOF
 }
 
 # Actualización finalizada.
-system_end_installation() {
+system_end_update() {
   print_banner
-  printf "${YELLOW} ✅ Actualización de AzuraCast finalizada con éxito.${GRAY_LIGHT}"
+  printf "${YELLOW} ✅ Instalación de Radio finalizada con éxito.${GRAY_LIGHT}"
   printf "\n\n"
-}
+  printf "¿Deseas regresar al Inicio para instalar Radio? Y/N\n" radio
+  read -p "> "
+    if [ "$radio" != "Y" ]
+then
+    bash install_radio && exit
+else
+    exit
+fi
