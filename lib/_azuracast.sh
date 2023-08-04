@@ -28,7 +28,7 @@ system_end_update() {
   read -p "> "
     if [ "$radio" != "Y" ]
 then
-    bash install_radio && exit
+    bash install_radio.sh && exit
 else
     cd ~ && rm -r /var/azuracast/radio-jucrik && exit
 fi
