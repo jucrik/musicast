@@ -11,10 +11,9 @@ system_copy_files() {
   sleep 2
 
   sudo su - root <<EOF
-  cd ~
   cp -r /var/azuracast/radio-jucrik/files/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www
   sleep 2
-  cd ~ && rm -r /var/azuracast/radio-jucrik
+  rm -r /var/azuracast/radio-jucrik
 EOF
 
   sleep 2
