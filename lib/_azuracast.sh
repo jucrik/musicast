@@ -35,7 +35,9 @@ system_end_update() {
       ;;
 
     2)
-      cd ~ && rm -r /var/azuracast/radio-jucrik && cd ~ && exit
+      cd ~
+      rm -r /var/azuracast/radio-jucrik
+      cd ~ && exit
       ;;
 
     *) exit ;;

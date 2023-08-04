@@ -14,7 +14,9 @@ system_copy_files() {
   cd ~
   cp -r /var/azuracast/radio-jucrik/img/login/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www/web/static/img
   sleep 2
-  cd ~ && rm -r /var/azuracast/radio-jucrik && cd ~
+  cd ~
+  rm -r /var/azuracast/radio-jucrik
+  cd ~
 EOF
 
   sleep 2
