@@ -1,5 +1,5 @@
 Versiones:<br>
-[![Radio](https://img.shields.io/badge/Versión-v0.18.5-orange)](https://jucrik.com/streaming-de-audio)
+[![MusiCast](https://img.shields.io/badge/Versión_MusiCast-v1.0.0-blue)](https://jucrik.com/musicast-app)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.04.4-orange)]()
 [![Web](https://img.shields.io/badge/Sitio_Web-jucrik.com-blue)](https://jucrik.com/)
 
@@ -7,6 +7,8 @@ Versiones:<br>
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/jucrik)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/+593983927872)
 [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@jucrik)
+
+MusiCast es una personalziación de AzuraCast.
 
 AzuraCast es una suite de gestión de radio web autoalojada, todo en uno. Gracias a su sencillo instalador y a su potente e intuitiva interfaz web, podrás poner en marcha una emisora de radio web totalmente operativa en pocos minutos.
 
@@ -116,8 +118,8 @@ services:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
 
-# Actualización de AzuraCast
-Si se desea después de actualizar AzuraCast se puede volver a instalar la personalización de Radio.
+# Personalización de AzuraCast
+Si se desea después de actualizar AzuraCast se puede volver a instalar la personalización de MusiCast.
 ```bash
-cd ~ && git clone https://github.com/jucrik/radio.git /var/azuracast/radio-jucrik && chmod -R 777 /var/azuracast/radio-jucrik && cd /var/azuracast/radio-jucrik && bash install_radio.sh
+cd ~ && git clone https://github.com/jucrik/musicast.git /var/azuracast/musicast && chmod -R 777 /var/azuracast/musicast && cd /var/azuracast/musicast && bash musicast.sh
 ```
