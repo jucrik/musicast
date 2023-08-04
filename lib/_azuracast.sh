@@ -14,8 +14,6 @@ get_update_azuracast() {
   cd /var/azuracast
   ./docker.sh update-self
   yes "" | ./docker.sh update
-  sleep 2
-  cd ~ && rm -r /var/azuracast/radio-jucrik
 EOF
 
   sleep 2
@@ -32,5 +30,5 @@ system_end_update() {
 then
     bash install_radio && exit
 else
-    exit
+    cd ~ && rm -r /var/azuracast/radio-jucrik && exit
 fi
