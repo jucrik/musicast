@@ -15,7 +15,7 @@ PROJECT_ROOT="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 # required imports
 source "${PROJECT_ROOT}"/variables/manifest.sh
 source "${PROJECT_ROOT}"/utils/manifest.sh
-source "${PROJECT_ROOT}"/lib/manifest.sh
+source "${PROJECT_ROOT}"/lib/manifest_azuracast.sh
 
  user configs file
 if [[ ! -e "${PROJECT_ROOT}"/config ]]; then
@@ -32,8 +32,4 @@ EOF
 source "${PROJECT_ROOT}"/config
 
 # interactive CLI
-inquiry_options
-
-# installation order
-system_copy_files
-system_end_installation
+get_update_azuracast
