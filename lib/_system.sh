@@ -23,6 +23,6 @@ EOF
 # Instalación finalizada.
 system_end_installation() {
   print_banner
-  printf "${YELLOW} ✅ Instalación finalizada con éxito.${GRAY_LIGHT}"
+  printf "${YELLOW} ✅ Instalación de Radio finalizada con éxito.${GRAY_LIGHT}"
   printf "\n\n"
 }

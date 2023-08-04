@@ -33,3 +33,6 @@ source "${PROJECT_ROOT}"/config
 
 # interactive CLI
 get_update_azuracast
+
+# installation order
+system_end_installation
