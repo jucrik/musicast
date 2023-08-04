@@ -24,10 +24,10 @@ get_urls() {
 inquiry_options() {
   
   print_banner
-  printf "${YELLOW} 🚀 ¡Bienvenido al instalador de Radio de Jucrik.com! Selecciona la siguiente acción para continuar:${GRAY_LIGHT}"
+  printf "${YELLOW} 🚀 ¡Bienvenido al instalador de MusiCast de Jucrik.com! Selecciona la siguiente acción para continuar:${GRAY_LIGHT}"
   printf "\n\n"
-  printf "   [1] Personalizar Radio de Jucrik.com\n"
-  printf "   [2] Actualizar Azuracast (después de actualizar es necesario volver a personalizar)\n"
+  printf "   [1] Personalizar MusiCast de Jucrik.com\n"
+  printf "   [2] Actualizar AzuraCast (después de actualizar es necesario volver a personalizar)\n"
   printf "   [3] Salir\n"
   printf "\n"
   read -p "> " option
@@ -42,7 +42,7 @@ inquiry_options() {
       ;;
 
     3)
-      cd ~ && rm -r /var/azuracast/radio-jucrik && exit
+      cd ~ && rm -r /var/azuracast/musicast && exit
       ;;
 
     *) exit ;;

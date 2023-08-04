@@ -22,20 +22,20 @@ EOF
 # Actualización finalizada.
 system_end_update() {
   print_banner
-  printf "${YELLOW} ✅ Instalación de Radio finalizada con éxito.${GRAY_LIGHT}"
+  printf "${YELLOW} ✅ Instalación de MusiCast finalizada con éxito.${GRAY_LIGHT}"
   printf "\n\n"  
-  printf "   [1] Regresar al Inicio para instalar Radio\n"
+  printf "   [1] Regresar al Inicio para instalar MusiCast\n"
   printf "   [2] Salir\n"
   printf "\n"
   read -p "> " option
 
   case "${option}" in
     1)
-      bash install_radio.sh && exit
+      bash musicast.sh && exit
       ;;
 
     2)
-      cd ~ && rm -r /var/azuracast/radio-jucrik && exit
+      cd ~ && rm -r /var/azuracast/musicast && exit
       ;;
 
     *) exit ;;

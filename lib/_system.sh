@@ -2,19 +2,19 @@
 # 
 # system management
 
-# Instalar Radio de Jucrik.
+# Instalar MusiCast de Jucrik.
 system_copy_files() {
   print_banner
-  printf "${YELLOW} ⬇️ Instalando Radio...${GRAY_LIGHT}"
+  printf "${YELLOW} ⬇️ Instalando MusiCast...${GRAY_LIGHT}"
   printf "\n\n"
 
   sleep 2
 
   sudo su - root <<EOF
   cd ~
-  cp -r /var/azuracast/radio-jucrik/files/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www
+  cp -r /var/azuracast/musicast/files/* /var/lib/docker/overlay2/${folder_azuracast}/diff/var/azuracast/www
   sleep 2
-  cd ~ && rm -r /var/azuracast/radio-jucrik
+  cd ~ && rm -r /var/azuracast/musicast
 EOF
 
   sleep 2
