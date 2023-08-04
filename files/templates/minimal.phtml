@@ -52,18 +52,6 @@ $hide_footer ??= false;
     <?= $this->section('content') ?>
 </main>
 
-<?php
-$hide_footer ??= false;
-if (!$customization->hideProductName() && !$hide_footer): ?>
-    <footer id="footer" class="footer-alt" role="contentinfo" aria-label="<?= __('Footer') ?>">
-        <?= sprintf(
-            __('Personalizado por %s'),
-            '<a href="https://jucrik.com/" target="_blank">' . $environment->getAppName() . '</a>' . ' '
-        ) ?>
-    </footer>
-<?php
-endif; ?>
-
 <?= $this->fetch('partials/toasts') ?>
 </body>
 </html>
