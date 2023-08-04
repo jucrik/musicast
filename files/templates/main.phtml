@@ -190,7 +190,8 @@ if (!$sections->has('sidebar')): ?>class="footer-alt"<?php
 endif; ?> role="contentinfo" aria-label="<?= __('Footer') ?>">
     <?= sprintf(
         __('Desarrollado por Jucrik.com'),
-        '<a href="https://jucrik.com/" target="_blank">' . ' &bull; ' . ($environment->isDocker(
+        '<a href="https://jucrik.com/" target="_blank">' . $environment->getAppName(
+            ) . '</a> &bull; ' . $version->getVersionText() . ' &bull; ' . ($environment->isDocker(
         ) ? 'Docker' : 'Ansible') . ' &bull; PHP ' . \PHP_MAJOR_VERSION . '.' . \PHP_MINOR_VERSION
     ) ?>
     <br>
