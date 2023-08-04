@@ -23,12 +23,21 @@ EOF
 system_end_update() {
   print_banner
   printf "${YELLOW} ✅ Instalación de Radio finalizada con éxito.${GRAY_LIGHT}"
-  printf "\n\n"
-  printf "¿Deseas regresar al Inicio para instalar Radio? Y/N\n" radio
-  read -p "> "
-    if [ "$radio" != "Y" ]
-then
-    bash install_radio.sh && exit
-else
-    cd ~ && rm -r /var/azuracast/radio-jucrik && exit
-fi
+  printf "\n\n"  
+  printf "   [1] Regresar al Inicio para instalar Radio\n"
+  printf "   [2] Salir\n"
+  printf "\n"
+  read -p "> " option
+
+  case "${option}" in
+    1)
+      bash install_radio.sh && exit
+      ;;
+
+    2)
+      cd ~ && rm -r /var/azuracast/radio-jucrik && exit
+      ;;
+
+    *) exit ;;
+  esac
+}

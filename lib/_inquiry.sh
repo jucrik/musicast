@@ -42,7 +42,7 @@ inquiry_options() {
       ;;
 
     3)
-      exit
+      cd ~ && rm -r /var/azuracast/radio-jucrik && exit
       ;;
 
     *) exit ;;
