@@ -49,47 +49,38 @@ Independientemente del sistema operativo que elija, para evitar problemas de com
 # Instalación en VPS (Ubuntu 20.04 LTS)
 Conéctese al servidor o computadora en la que desea instalar AzuraCast a través de un terminal SSH. Debe ser un usuario administrador con acceso root o la capacidad de usar el comando <code>sudo</code>. Si no es el usuario root, es posible que deba ejecutar <code>sudo su -</code> antes de ejecutar los comandos a continuación.
 
-## Paso 1
-Elija un directorio base en su computadora host que AzuraCast pueda usar. Si está en Linux, puede seguir los pasos a continuación para usar el directorio recomendado:
+1. Elija un directorio base en su computadora host que AzuraCast pueda usar. Si está en Linux, puede seguir los pasos a continuación para usar el directorio recomendado:
 ```bash
 mkdir -p /var/azuracast
 cd /var/azuracast
 ```
 
-## Paso 2
-Dentro del directorio creado, nos descargaremos el script del repositorio para poder instalarlo
+2. Dentro del directorio creado, nos descargaremos el script del repositorio para poder instalarlo
 ```bash
 curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
 chmod a+x docker.sh
 ./docker.sh install
 ```
 
-## Paso 3
-El script realizará una revisión al sistema operativo para saber si cumple con todos los requisitos, en este caso nos avisa de que docker-compose no se encuentra instalado, le decimos que lo instale con el comando <code>Y</code>.
+3. El script realizará una revisión al sistema operativo para saber si cumple con todos los requisitos, en este caso nos avisa de que docker-compose no se encuentra instalado, le decimos que lo instale con el comando <code>Y</code>.
 
-## Paso 4
-Luego nos preguntará si quiere actualizar el paquete, como ya lo tenemos descargado desde el repositorio, le diremos <code>N</code> para que inicie con la instalación.
+4. Luego nos preguntará si quiere actualizar el paquete, como ya lo tenemos descargado desde el repositorio, le diremos <code>N</code> para que inicie con la instalación.
 
-## Paso 5
-Cuando se haya descargado todos los contenedores, nos pedirá el idioma del instalador <code>es_ES</code>.
+5. Cuando se haya descargado todos los contenedores, nos pedirá el idioma del instalador <code>es_ES</code>.
 
-## Paso 6
-Dejamos los puertos por defecto cuando nos pregunte si los deseamos personalizar <code>no</code>.
+6. Dejamos los puertos por defecto cuando nos pregunte si los deseamos personalizar <code>no</code>.
 
-## Paso 7
-Nos hará dos preguntas más, a ambas le decimos que <code>no</code>.
+7. Nos hará dos preguntas más, a ambas le decimos que <code>no</code>.
 
-## Paso 8
-Una vez completada la instalación, debe visitar inmediatamente la dirección web pública de su servidor. Esta puede ser la IP del servidor, un nombre de dominio (si registró uno y lo apuntó al servidor) o localhost si está ejecutando AzuraCast en su computadora personal.
+8. Una vez completada la instalación, debe visitar inmediatamente la dirección web pública de su servidor. Esta puede ser la IP del servidor, un nombre de dominio (si registró uno y lo apuntó al servidor) o localhost si está ejecutando AzuraCast en su computadora personal.
 
-## Paso 9
-La configuración web inicial consta de los siguientes pasos:
+9. La configuración web inicial consta de los siguientes pasos:
 
-1. Creación de una cuenta de "superadministrador" con permisos de administración en todo el sistema.
-2. Creación de la primera emisora ​​de radio que gestionará el sistema.
-3. Personalización de configuraciones importantes de AzuraCast, como la URL base del sitio y la configuración de HTTPS.
+- Creación de una cuenta de "superadministrador" con permisos de administración en todo el sistema.
+- Creación de la primera emisora ​​de radio que gestionará el sistema.
+- Personalización de configuraciones importantes de AzuraCast, como la URL base del sitio y la configuración de HTTPS.
 
-https://youtu.be/m_D9ogDKXt8?t=1657
+<iframe src="https://www.youtube.com/embed/m_D9ogDKXt8&t=1657s" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Certificado SSL con LetsEncrypt
 AzuraCast incluye compatibilidad integrada para crear y administrar certificados SSL (HTTPS) a través de LetsEncrypt desde el panel Configuración del sistema.
@@ -108,7 +99,7 @@ El certificado HTTPS se generará automáticamente en los próximos minutos, per
 
 Si los usuarios aún tienen problemas con el audio que no se reproduce, asegúrese de tener habilitada la opción "Usar proxy web" en la configuración del sistema.
 
-## Habilitación de LetsEncrypt
+## Renocación de LetsEncrypt
 El servicio web renovará automáticamente sus certificados LetsEncrypt. Si proporciona un correo electrónico en el proceso de configuración inicial, ese correo electrónico se utilizará para enviarle recordatorios de la próxima caducidad en caso de que falle la renovación automática.
 
 ## Utilizar siempre HTTPS
@@ -124,3 +115,9 @@ services:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;volumes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.crt:/var/azuracast/acme/ssl.crt:ro<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- /path/on/host/to/ssl.key:/var/azuracast/acme/ssl.key:ro
+
+# Actualización de AzuraCast
+Si se desea después de actualizar AzuraCast se puede volver a instalar la personalización de Radio.
+```bash
+cd ~ && git clone https://github.com/jucrik/radio.git /var/azuracast/radio-jucrik && chmod -R 777 /var/azuracast/radio-jucrik && cd /var/azuracast/radio-jucrik && bash install_radio.sh
+```
