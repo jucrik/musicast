@@ -53,7 +53,7 @@ $hide_footer ??= false;
 </main>
 
 <?php
-$hide_footer ??= true;
+/*$hide_footer ??= false;
 if (!$customization->hideProductName() && !$hide_footer): ?>
     <footer id="footer" class="footer-alt" role="contentinfo" aria-label="<?= __('Footer') ?>">
         <?= sprintf(
@@ -62,7 +62,7 @@ if (!$customization->hideProductName() && !$hide_footer): ?>
         ) ?>
     </footer><?php
 <?php
-endif; ?>
+endif; ?>*/
 
 <?= $this->fetch('partials/toasts') ?>
 </body>
