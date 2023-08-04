@@ -80,7 +80,7 @@ chmod a+x docker.sh
 - Creación de la primera emisora ​​de radio que gestionará el sistema.
 - Personalización de configuraciones importantes de AzuraCast, como la URL base del sitio y la configuración de HTTPS.
 
-<iframe src="https://www.youtube.com/embed/m_D9ogDKXt8&t=1657s" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Configuración]()](https://www.youtube.com/watch?v=m_D9ogDKXt8&t=1657s)
 
 # Certificado SSL con LetsEncrypt
 AzuraCast incluye compatibilidad integrada para crear y administrar certificados SSL (HTTPS) a través de LetsEncrypt desde el panel Configuración del sistema.
