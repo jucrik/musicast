@@ -123,3 +123,8 @@ Si se desea después de actualizar AzuraCast se puede volver a instalar la perso
 ```bash
 cd ~ && git clone https://github.com/jucrik/musicast.git /var/azuracast/musicast && chmod -R 777 /var/azuracast/musicast && cd /var/azuracast/musicast && bash musicast.sh
 ```
+
+# Descargr Shoutcast 2
+La versión a descargar es la 2.6.1.777.
+
+[![Shoutcast](https://img.shields.io/badge/Shoutcast-2.6.1.777-blue)](https://download.nullsoft.com/shoutcast/tools/sc_serv2_linux_x64-latest.tar.gz)
