@@ -3,7 +3,7 @@
 folder_search() {
   print_banner
   printf "${YELLOW} 🔎 Buscando la carpeta codificada donde se instaló AzuraCast...${GRAY_LIGHT}\n"
-  find /var/lib/docker/overlay2/ -name main.phtml
+  find /var/lib/docker/overlay2/ -name PanelLayout.vue
   printf "\n"
   printf "Cuando hayas copiado el nombre de la carpeta codificada, presione ENTER para continuar.\n"
   read -p "> " folder_search

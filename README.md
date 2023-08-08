@@ -1,5 +1,5 @@
 Versiones:<br>
-[![MusiCast](https://img.shields.io/badge/Versión_MusiCast-v1.0.0-blue)](https://jucrik.com/musicast-app)
+[![AzurCast](https://img.shields.io/badge/Versión_AzuraCast-v0.18.5-blue)](https://jucrik.com/apps/musicast)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-v20.04.4-orange)]()
 [![Web](https://img.shields.io/badge/Sitio_Web-jucrik.com-blue)](https://jucrik.com/)
 
@@ -124,7 +124,7 @@ Si se desea después de actualizar AzuraCast se puede volver a instalar la perso
 cd ~ && git clone https://github.com/jucrik/musicast.git /var/azuracast/musicast && chmod -R 777 /var/azuracast/musicast && cd /var/azuracast/musicast && bash musicast.sh
 ```
 
-# Descargr Shoutcast 2
+# Descargar Shoutcast 2
 La versión a descargar es la 2.6.1.777.
 
 [![Shoutcast](https://img.shields.io/badge/Shoutcast-2.6.1.777-blue)](https://download.nullsoft.com/shoutcast/tools/sc_serv2_linux_x64-latest.tar.gz)
