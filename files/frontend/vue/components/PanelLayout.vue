@@ -28,7 +28,7 @@
             class="navbar-brand ms-0 me-auto"
             :href="homeUrl"
         >
-            azura<strong>cast</strong><img src="https://jucrik.com/files/logos/products/musicast-white.png">
+            azura<strong>cast</strong>
             <small v-if="instanceName">{{ instanceName }}</small>
         </a>
 
@@ -147,7 +147,7 @@
         id="footer"
         :class="[(slots.sidebar) ? 'has-sidebar' : '']"
     >
-        {{ $gettext('Powered by') }}
+        {{ $gettext('dddddddddddddddddddPowered by') }}
         <a
             href="https://www.azuracast.com/"
             target="_blank"

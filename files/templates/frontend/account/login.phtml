@@ -20,7 +20,7 @@ $this->layout(
             <div class="row mb-4">
                 <div class="col-sm">
                     <h2 class="card-title text-center">
-                        <img src="https://jucrik.com/files/logos/products/musicast.png"><?php
+                        <img src="https://jucrik.com/files/logos/products/musicast.png"><br><?php
                         if ($customization->hideProductName()): ?>
                             <?= __('Welcome!') ?>
                         <?php
@@ -31,7 +31,7 @@ $this->layout(
                     </h2>
                     <?php
                     if (!empty($customization->getInstanceName())): ?>
-                        <h3 class="card-subtitle text-center text-muted">
+                        <br><h3 class="card-subtitle text-center text-muted">
                             <?= $this->e($customization->getInstanceName()) ?>
                         </h3>
                     <?php

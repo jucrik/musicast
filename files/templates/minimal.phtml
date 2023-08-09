@@ -38,8 +38,6 @@ $hide_footer ??= false;
 
 <body class="page-minimal <?= $page_class ?? '' ?>">
 
-<?= $this->fetch('partials/bodyjs') ?>
-
 <?= $sections->get('bodyjs') ?>
 
 <script>
@@ -51,6 +49,18 @@ $hide_footer ??= false;
 <main>
     <?= $this->section('content') ?>
 </main>
+
+<?php
+$hide_footer ??= false;
+if (!$customization->hideProductName() && !$hide_footer): ?>
+    <footer id="footer" class="footer-alt" role="contentinfo" aria-label="<?= __('Footer') ?>">
+        <?= sprintf(
+            __('Desarrollado por %s'),
+            '<a href="https://azuracast.com/" target="_blank">' . $environment->getAppName() . '</a>' . ' ' . '| Personalizado por <a href="https://jucrik.com/" target="_blank">'. 'Jucrik' . '</a>' . ' '
+        ) ?>
+    </footer>
+<?php
+endif; ?>
 
 <?= $this->fetch('partials/toasts') ?>
 </body>
